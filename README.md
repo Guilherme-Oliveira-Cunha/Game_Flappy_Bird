@@ -10,7 +10,7 @@
 ## :hammer: Funcionalidades do projeto
 
 - `Funcionalidade 1`: Com a tecla `ESPAÇO` do seu computador, você será capaz de controlar o personagem.
-
+  
 
 
 
@@ -27,3 +27,4 @@
 ## 📁 Acesso ao projeto
 
  ### Você pode acessar o projeto fazendo o [download]() por aqui ⬇⬇
+      
