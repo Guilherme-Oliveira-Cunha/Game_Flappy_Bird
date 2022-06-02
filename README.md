@@ -11,14 +11,12 @@
 
 - `Funcionalidade 1`: Com a tecla `ESPAÇO` do seu computador, você será capaz de controlar o personagem.
   
-
-
-
-
 ## ✔️ Técnicas e tecnologias utilizadas
 
 - `Python 3.8.10`
 - `pygame 2.1.2`
+
+https://user-images.githubusercontent.com/96260598/171660425-726081f0-081a-4689-8e7f-2826b156ab7c.mp4
 
 ## 🧑‍💻 Autores 
 
