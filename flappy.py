@@ -49,11 +49,10 @@ class Bird:
         self.height = self.y
 
     def move(self):
-        # calcular o deslocamento
+
         self.time += 1
         displacement = 1.5 * (self.time**2) + self.velocity * self.time
 
-        # restringir o deslocamento
         if displacement > 16:
             displacement = 16
         elif displacement < 0:
@@ -61,7 +60,6 @@ class Bird:
 
         self.y += displacement
 
-        # o angulo do bird
         if displacement < 0 or self.y < (self.height + 50):
             if self.angle < self.MAXIMUM_ROTATION:
                 self.angle = self.MAXIMUM_ROTATION
@@ -84,12 +82,10 @@ class Bird:
             self.image = self.IMGS[0]
             self.count_image = 0
 
-        # se o bird tiver caindo eu não vou bater asa
         if self.angle <= -80:
             self.image = self.IMGS[1]
             self.count_image = self.TIME_ANIMATION * 2
 
-        # draw a image
         rotated_image = pygame.transform.rotate(self.image, self.angle)
         pos_centro_image = self.image.get_rect(topleft=(self.x, self.y)).center
         rectangle = rotated_image.get_rect(center=pos_centro_image)
@@ -168,7 +164,7 @@ class Chao:
 
 def draw_screen(screen, birds, pipes, chao, points):
     screen.blit(IMAGE_BACKGROUND, (0, 0))
-    for bird in birds:git 
+    for bird in birds:
         bird.draw(screen)
     for pipe in pipes:
         pipe.draw(screen)
@@ -191,7 +187,6 @@ def main():
     while rodando:
         watch.tick(30)
 
-        # interação com o usuário
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 rodando = False
@@ -202,7 +197,6 @@ def main():
                     for bird in birds:
                         bird.jump()
 
-        # move as coisas
         for bird in birds:
             bird.move()
         chao.move()
